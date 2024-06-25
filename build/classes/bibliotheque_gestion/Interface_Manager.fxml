@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="903.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bibliotheque_gestion.Manager_InterfaceController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="642.0" prefWidth="226.0" style="-fx-background-color: #ff1a1a;">
+         <children>
+            <ImageView fitHeight="126.0" fitWidth="115.0" layoutX="54.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/management.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="53.0" layoutY="162.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="171.0" style="-fx-background-color: #ff1a1a;" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="53.0" layoutY="208.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="171.0" style="-fx-background-color: #ff1a1a;" text="Livres" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="53.0" layoutY="262.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="171.0" style="-fx-background-color: #ff1a1a;" text="Auteurs" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="53.0" layoutY="316.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="171.0" style="-fx-background-color: #ff1a1a;" text="Abonnées" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="53.0" layoutY="364.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="171.0" style="-fx-background-color: #ff1a1a;" text="Reservations" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="44.0" layoutY="523.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="115.0" style="-fx-background-color: #ff1a1a;" text="Log out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="14.0" layoutY="169.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/dashboard.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="14.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/book.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="14.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/writer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="14.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/ad.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="14.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/booking.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="30.0" layoutX="14.0" layoutY="539.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/logout.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Livre_panel" layoutX="225.0" layoutY="57.0" prefHeight="578.0" prefWidth="698.0">
+         <children>
+            <AnchorPane layoutX="51.0" layoutY="23.0" prefHeight="81.0" prefWidth="200.0" style="-fx-background-color: #ff1a1a; -fx-border-color: #000; -fx-border-width: 2px;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Nombre de Livres" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nb_livres" layoutX="14.0" layoutY="41.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="433.0" layoutY="23.0" prefHeight="81.0" prefWidth="200.0" style="-fx-background-color: #ff1a1a; -fx-border-color: #000; -fx-border-width: 2px;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Nombre de Genres" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Nb_genres" layoutX="14.0" layoutY="41.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="table_livres" layoutX="24.0" layoutY="115.0" prefHeight="210.0" prefWidth="659.0">
+               <columns>
+                  <TableColumn fx:id="table_isbn" text="ISBN">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="isbn" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="table_titre" text="Titre">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="titre" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="table_auteur" text="Auteur">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="idAuteur" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="table_description" text="Description">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="description" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn fx:id="table_genre" text="Genre">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="genre" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField fx:id="isbn" layoutX="42.0" layoutY="335.0" promptText="ISBN" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="titre" layoutX="232.0" layoutY="335.0" promptText="Titre" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="genre" layoutX="42.0" layoutY="389.0" promptText="Genre" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="auteur_id" layoutX="232.0" layoutY="389.0" promptText="ID Auteur" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="description" layoutX="433.0" layoutY="335.0" prefHeight="200.0" prefWidth="240.0" promptText="Description" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;" />
+            <Button fx:id="add_btn" layoutX="42.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#add_livre" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #ff1a1a;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="update_btn" layoutX="158.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#update_livre" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #ff1a1a;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="delete_btn" layoutX="269.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#delete_livre" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #ff1a1a;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="search" layoutX="38.0" layoutY="503.0" onInputMethodTextChanged="#search_livre" prefHeight="31.0" prefWidth="378.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="225.0" layoutY="34.0" prefHeight="555.0" prefWidth="678.0" visible="false">
+         <children>
+            <AnchorPane layoutX="219.0" layoutY="28.0" prefHeight="81.0" prefWidth="200.0" style="-fx-background-color: #ff1a1a; -fx-border-color: #000; -fx-border-width: 2px;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Nombre d'auteurs" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="41.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TableView layoutX="24.0" layoutY="119.0" prefHeight="200.0" prefWidth="639.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="ISBN" />
+                  <TableColumn prefWidth="75.0" text="Titre" />
+                  <TableColumn prefWidth="75.0" text="Genre" />
+                  <TableColumn prefWidth="75.0" text="ID auteur" />
+                  <TableColumn prefWidth="75.0" text="Description" />
+               </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <TextField layoutX="42.0" layoutY="335.0" promptText="ISBN" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="232.0" layoutY="335.0" promptText="Titre" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="42.0" layoutY="389.0" promptText="Genre" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="232.0" layoutY="389.0" promptText="ID Auteur" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextArea layoutX="433.0" layoutY="335.0" prefHeight="200.0" prefWidth="240.0" promptText="Description" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;" />
+            <Button layoutX="42.0" layoutY="443.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #ff1a1a;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="158.0" layoutY="443.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #ff1a1a;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="269.0" layoutY="443.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: #ff1a1a;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField layoutX="38.0" layoutY="503.0" prefHeight="31.0" prefWidth="378.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #000;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Button fx:id="quit_btn" layoutX="857.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#quit_app" prefHeight="40.0" prefWidth="52.0" style="-fx-background-color: #ff1a1a;" text="X" textFill="WHITE">
+         <font>
+            <Font name="Antique Olive CompactPS" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

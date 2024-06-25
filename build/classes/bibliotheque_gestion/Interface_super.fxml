@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="903.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bibliotheque_gestion.Interface_SuperController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="610.0" prefWidth="254.0" style="-fx-background-color: linear-gradient(to right, #333333, #dd1818);">
+         <children>
+            <ImageView fitHeight="93.0" fitWidth="94.0" layoutX="81.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/software-engineer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="31.0" fitWidth="30.0" layoutX="14.0" layoutY="543.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/logout.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="managers_btn" layoutX="81.0" layoutY="224.0" mnemonicParsing="false" onMouseClicked="#afficher_manager_panel" prefHeight="52.0" prefWidth="171.0" style="-fx-background-color: linear-gradient(to right, #333333, #dd1818);" text="Managers" textFill="WHITE">
+               <font>
+                  <Font name="Antique Olive Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="history_btn" layoutX="81.0" layoutY="316.0" mnemonicParsing="false" onMouseClicked="#afficher_history_panel" prefHeight="52.0" prefWidth="171.0" style="-fx-background-color: linear-gradient(to right, #333333, #dd1818);" text="History" textFill="WHITE">
+               <font>
+                  <Font name="Antique Olive Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="log_out_btn" layoutX="64.0" layoutY="532.0" mnemonicParsing="false" onMouseClicked="#log_out" prefHeight="52.0" prefWidth="126.0" style="-fx-background-color: linear-gradient(to right, #333333, #dd1818);" text="Log out" textFill="WHITE">
+               <font>
+                  <Font name="Antique Olive Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="24.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/ad.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="24.0" layoutY="326.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Assets/history.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="managers_panel" layoutX="254.0" layoutY="39.0" prefHeight="568.0" prefWidth="650.0">
+         <children>
+            <AnchorPane layoutX="197.0" layoutY="90.0" prefHeight="82.0" prefWidth="258.0" style="-fx-background-color: linear-gradient(to right, #333333, #dd1818); -fx-border-color: #000; -fx-border-width: 2px;">
+               <children>
+                  <Label layoutX="32.0" layoutY="14.0" text="Nombre de managers" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nb_managers" layoutX="123.0" layoutY="41.0" prefHeight="30.0" prefWidth="11.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="table_managers" layoutX="14.0" layoutY="199.0" onMousePressed="#afficher_manager" prefHeight="200.0" prefWidth="618.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button fx:id="clear_manager_btn" layoutX="485.0" layoutY="445.0" mnemonicParsing="false" onMouseClicked="#clear_manager" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: linear-gradient(to right, #333333, #dd1818);" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txt_manager_id" layoutX="6.0" layoutY="404.0" prefHeight="31.0" prefWidth="206.0" promptText="ID Manager" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: linear-gradient(to right, #333333, #dd1818);">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txt_man_username" layoutX="220.0" layoutY="404.0" prefHeight="31.0" prefWidth="206.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: linear-gradient(to right, #333333, #dd1818);">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txt_man_email" layoutX="437.0" layoutY="404.0" prefHeight="31.0" prefWidth="206.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: linear-gradient(to right, #333333, #dd1818);">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txt_man_pass" layoutX="70.0" layoutY="449.0" prefHeight="31.0" prefWidth="355.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: linear-gradient(to right, #333333, #dd1818);">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="add_man_btn" layoutX="161.0" layoutY="497.0" mnemonicParsing="false" onMouseClicked="#add_manager" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: linear-gradient(to right, #333333, #dd1818);" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="update_btn" layoutX="272.0" layoutY="497.0" mnemonicParsing="false" onMouseClicked="#update_manager" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: linear-gradient(to right, #333333, #dd1818);" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="delete_btn" layoutX="388.0" layoutY="497.0" mnemonicParsing="false" onMouseClicked="#delete_manager" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: linear-gradient(to right, #333333, #dd1818);" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <AnchorPane layoutX="-1.0" prefHeight="40.0" prefWidth="651.0" style="-fx-background-color: linear-gradient(to right, #dd1818, #333333);">
+               <children>
+                  <TextField fx:id="txt_search_man" layoutX="22.0" layoutY="3.0" onKeyPressed="#search_manager" prefHeight="33.0" prefWidth="246.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff; -fx-border-radius: 15px;">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="23.0" fitWidth="18.0" layoutX="238.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assets/search-interface-symbol.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="history_panel" layoutX="254.0" layoutY="39.0" prefHeight="568.0" prefWidth="650.0" visible="false">
+         <children>
+            <AnchorPane layoutX="199.0" layoutY="118.0" prefHeight="82.0" prefWidth="258.0" style="-fx-background-color: linear-gradient(to right, #333333, #dd1818); -fx-border-color: #000; -fx-border-width: 2px;">
+               <children>
+                  <Label layoutX="38.0" layoutY="14.0" text="Nombre d'operations" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nb_operations" layoutX="123.0" layoutY="41.0" prefHeight="30.0" prefWidth="11.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TableView fx:id="table_history" layoutX="16.0" layoutY="227.0" onMousePressed="#afficher_history" prefHeight="200.0" prefWidth="618.0">
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Button fx:id="clear_history" layoutX="504.0" layoutY="437.0" mnemonicParsing="false" onMouseClicked="#clear_history" prefHeight="40.0" prefWidth="98.0" style="-fx-background-color: linear-gradient(to right, #333333, #dd1818);" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="txt_hist_id" layoutX="39.0" layoutY="441.0" prefHeight="31.0" prefWidth="206.0" promptText="ID History" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: linear-gradient(to right, #333333, #dd1818);">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txt_desc_his" layoutX="39.0" layoutY="491.0" prefHeight="31.0" prefWidth="594.0" promptText="Description" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: linear-gradient(to right, #333333, #dd1818);">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <AnchorPane prefHeight="52.0" prefWidth="650.0" style="-fx-background-color: linear-gradient(to right, #dd1818, #333333);">
+               <children>
+                  <TextField fx:id="txt_search_hist" layoutX="24.0" layoutY="10.0" onKeyPressed="#search_history" prefHeight="31.0" prefWidth="230.0" promptText="Search" style="-fx-background-color: transparent; -fx-border-width: 2px; -fx-border-color: #fff; -fx-border-radius: 15px;">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fitHeight="23.0" fitWidth="18.0" layoutX="227.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Assets/search-interface-symbol.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="254.0" prefHeight="40.0" prefWidth="650.0" style="-fx-background-color: linear-gradient(to right, #dd1818, #333333);">
+         <children>
+            <Button fx:id="quit_btn" layoutX="609.0" layoutY="8.0" mnemonicParsing="false" onMouseClicked="#quit_app" prefHeight="6.0" prefWidth="24.0" style="-fx-background-color: #dd1818;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="Antique Olive CompactPS" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="time_label" layoutX="52.0" layoutY="12.0" prefHeight="28.0" prefWidth="98.0" text="9:20:34" textFill="WHITE">
+               <font>
+                  <Font name="Antique Olive Roman" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="22.0" fitWidth="20.0" layoutX="21.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Assets/clock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
